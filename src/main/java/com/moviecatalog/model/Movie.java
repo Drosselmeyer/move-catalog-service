@@ -3,12 +3,16 @@ package com.moviecatalog.model;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
+    @Size(min = 1, max = 100)
     private String name;
     private int releaseYear;
     @Column(length = 500)
