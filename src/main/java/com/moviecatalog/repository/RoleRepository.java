@@ -1,6 +1,6 @@
 package com.moviecatalog.repository;
 
-import com.moviecatalog.model.Role;
+import com.moviecatalog.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 @Repository

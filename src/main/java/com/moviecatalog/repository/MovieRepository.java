@@ -1,6 +1,6 @@
 package com.moviecatalog.repository;
 
-import com.moviecatalog.model.Movie;
+import com.moviecatalog.entity.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;

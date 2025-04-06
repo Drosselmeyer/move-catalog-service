@@ -1,6 +1,6 @@
 package com.moviecatalog.service;
 
-import com.moviecatalog.model.Movie;
+import com.moviecatalog.entity.Movie;
 import com.moviecatalog.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,8 +35,8 @@ public class MovieService {
             movie.setName(updatedMovie.getName());
             movie.setReleaseYear(updatedMovie.getReleaseYear());
             movie.setSynopsis(updatedMovie.getSynopsis());
-            movie.setPosterUrl(updatedMovie.getPosterUrl());
-            movie.setCategories(updatedMovie.getCategories());
+            movie.setImageUrl(updatedMovie.getImageUrl());
+            movie.setCategory(updatedMovie.getCategory());
             return movieRepository.save(movie);
         }).orElse(null);
     }

@@ -1,6 +1,6 @@
 package com.moviecatalog.controller;
 
-import com.moviecatalog.model.User;
+import com.moviecatalog.entity.User;
 import com.moviecatalog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +22,7 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
-        return ResponseEntity.ok(userService.saveUser(user));
+        return ResponseEntity.ok(userService.register(user));
     }
 
     @GetMapping("/by-email")
